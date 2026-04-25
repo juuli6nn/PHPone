@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: black; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formal-pic {
+    width: 80%;
+    align-items: center;
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 80vh; 
+}
+
+.left-column {
+    width: 40%;
+    background-color: #2c3e50; 
+    color: white; 
+    padding: 30px;
+    text-align: left;
+}
+
+.photo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.right-column {
+    width: 60%; 
+    background-color: white; 
+    color: #333; 
+    padding: 40px;
+}
+
+.ResumeName {
+    text-align: center;
+    font-size: 50px;
+}
+
+.Role {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.Profile {
+    font-weight: 100;
+    font-size: 12;
+}
+
+.Profile {
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 300;
+    text-align: justify;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid white;
+    margin-right: 200px;
+}
+
+.right-column hr {
+    border-top: 2px solid #2c3e50;
+}
+
+.header-hr {
+    margin-right: 0;
+}
+
+.section-hr {
+    margin-right: 400px;
+}
+
+.skills-list {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.skills-list li {
+    padding: 4px 0;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.right-column p {
+    text-align: justify;
+}
