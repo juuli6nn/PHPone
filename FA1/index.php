@@ -35,6 +35,7 @@
             $EXP2_TITLE = "Freelance Web Developer";
             $EXP2_COMPANY = "Self-Employed";
             $EXP2_DATE = "January 2024 - Present";
+            $EXP2_DESC = "Created custom websites for small businesses and individuals. Managed client requirements and delivered projects on time.";
             
             // Projects
             $PROJ1_TITLE = "Mclaren E-Commerce Website";
