@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #CCC7BF;
+    font-family: 'Inter', sans-serif;
+    padding: 40px 20px;
+    color: #333;
+}
+
+.wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #222;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px 25px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    align-items: start;
+}
+
+.name-row {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 14px 20px;
+    font-size: 20px;
+}
+
+.label {
+    font-weight: bold;
+    color: #555;
+}
+
+.name-value {
+    font-weight: 500;
+}
+
+.info-row {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.box {
+    width: 115px;
+    flex: none;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 110px;
+}
+
+.box-label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.box-value {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.rank-a  { background-color: #e8f5e9; border-color: #4caf50; }
+.rank-a  .box-value { color: #2e7d32; }
+
+.rank-b  { background-color: #e3f2fd; border-color: #2196f3; }
+.rank-b  .box-value { color: #1565c0; }
+
+.rank-c  { background-color: #fff8e1; border-color: #ffc107; }
+.rank-c  .box-value { color: #f57f17; }
+
+.rank-d  { background-color: #fff3e0; border-color: #ff9800; }
+.rank-d  .box-value { color: #e65100; }
+
+.rank-f  { background-color: #ffebee; border-color: #f44336; }
+.rank-f  .box-value { color: #b71c1c; }
+
+.grade-box .box-value {
+    color: #333;
+}
+
+.photo-box {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 100%;
+    min-height: 240px;
+    aspect-ratio: 4/5;
+    padding: 10px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.student-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.photo-placeholder {
+    font-size: 16px;
+    color: #aaa;
+    font-style: italic;
+    text-align: center;
+    line-height: 200px;
+}
+
+.return-button {
+    position: fixed;
+    text-align: center;
+    top: 50px;
+    left: 50px;
+    width: 60px;
+    height: 60px;
+    padding: 8px 16px;
+    background-color: whitesmoke;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 14px;
+    z-index: 1000;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.15s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+.return-button:hover {
+    background-color: gainsboro;
+    transform: translateY(-4px);
+    transition: all;
+}

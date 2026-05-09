@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #CCC7BF;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.section {
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.section-header {
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 10px;
+    color: #333;
+}
+
+.metric          { background-color: yellow; }
+.imperial        { background-color: yellow; }
+.metric-imperial { background-color: yellow; }
+.imperial-metric { background-color: yellow; }
+
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+td {
+    padding: 10px 14px;
+    font-size: 14px;
+    
+    border: 1px solid #e8e8e8; 
+    
+    vertical-align: middle;
+}
+
+
+td:first-child {
+    width: 28%;
+    font-weight: 500;
+}
+
+td.eq {
+    width: 4%;
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+}
+
+td:nth-child(3) {
+    width: 30%;
+}
+
+td.abbr {
+    width: 12%;
+    color: #666;
+    font-style: italic;
+}
+
+td:last-child {
+    width: 22%;
+    color: #444;
+}
+
+.return-button {
+            position: fixed;
+            text-align: center;
+            size: absolute;
+            top: 50px;
+            left: 50px;
+            width: 60px;
+            height: 60px;
+            padding: 8px 16px;
+            background-color: whitesmoke;
+            color: black;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 14px;
+            z-index: 1000; 
+            transition: background-color 0.2s, border-color 0.2s, transform 0.15s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            size: 24px;
+        }
+        .return-button:hover {
+            background-color: gainsboro;
+            transform: translateY(-4px);
+            transition: all;
+        }
