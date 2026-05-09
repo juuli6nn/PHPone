@@ -94,20 +94,43 @@ body {
     font-weight: bold;
 }
 
-.rank-a  { background-color: #e8f5e9; border-color: #4caf50; }
-.rank-a  .box-value { color: #2e7d32; }
+.rank-a  { 
+    background-color: #e8f5e9; 
+    border-color: #4caf50; 
+}
+.rank-a  .box-value {
+     color: #2e7d32; 
+}
 
-.rank-b  { background-color: #e3f2fd; border-color: #2196f3; }
-.rank-b  .box-value { color: #1565c0; }
+.rank-b  { 
+    background-color: #e3f2fd; 
+    border-color: #2196f3; 
+}
+.rank-b  .box-value { 
+    color: #1565c0; 
+}
 
-.rank-c  { background-color: #fff8e1; border-color: #ffc107; }
-.rank-c  .box-value { color: #f57f17; }
+.rank-c  { 
+    background-color: #fff8e1; 
+    border-color: #ffc107; }
+.rank-c  .box-value { 
+    color: #f57f17; 
+}
 
-.rank-d  { background-color: #fff3e0; border-color: #ff9800; }
-.rank-d  .box-value { color: #e65100; }
+.rank-d  { 
+    background-color: #fff3e0; 
+    border-color: #ff9800; }
+.rank-d  .box-value { 
+    color: #e65100; 
+}
 
-.rank-f  { background-color: #ffebee; border-color: #f44336; }
-.rank-f  .box-value { color: #b71c1c; }
+.rank-f  { 
+    background-color: #ffebee; 
+    border-color: #f44336; 
+}
+.rank-f  .box-value { 
+    color: #b71c1c; 
+}
 
 .grade-box .box-value {
     color: #333;
@@ -160,6 +183,7 @@ body {
     align-items: center;
     font-size: 24px;
 }
+
 .return-button:hover {
     background-color: gainsboro;
     transform: translateY(-4px);

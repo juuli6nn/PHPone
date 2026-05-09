@@ -16,10 +16,10 @@
         <h1 class="page-title">Activity 2: Grade Ranking Program</h1>
 
         <?php
-        $firstName  = "Arianne";
+        $firstName  = "Arianne Julian";
         $mi         = "A";
         $lastName   = "Cruz";
-        $grade      = 59;
+        $grade      = 60;
         $photo      = "";
 
         $fullName = $firstName . " " . $mi . ". " . $lastName;
@@ -76,6 +76,7 @@
         ?>
 
         <div class="card">
+            
             <div class="name-row">
                 <span class="label">Name:</span>
                 <span class="name-value"><?php echo ($fullName); ?></span>
