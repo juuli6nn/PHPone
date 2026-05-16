@@ -1,0 +1,159 @@
+body {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #eceff4;
+    color: #1f1f1f;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 28px;
+    background: white;
+}
+
+.header-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 0.45px;
+    color: #101828;
+    margin-bottom: 10px;
+}
+
+.title-divider {
+    width: 180px;
+    height: 3px;
+    background: #1f5fbf;
+    border: none;
+    margin: 0 auto 24px auto;
+}
+
+.header-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 0.35px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.section-heading {
+    margin: 24px 0 0;
+    font-size: 19px;
+    letter-spacing: 0.4px;
+    font-weight: 700;
+    color: #2b3a55;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    margin: 0;
+    font-size: 1rem;
+    color: #6c6c6c;
+    line-height: 1.4;
+}
+
+.student-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.wide-field {
+    grid-column: 1 / -1;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #c6cdd6;
+    background: #ffffff;
+    font-size: 0.96rem;
+    box-sizing: border-box;
+}
+
+input[readonly] {
+    background-color: #f7f9fb;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #7e9cff;
+    border-color: #7e9cff;
+}
+
+.submit-button {
+    width: 400px;
+    padding: 14px 18px;
+    border: none;
+    background-color: #1f5fbf;
+    color: white;
+    font-size: 0.96rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin: 24px auto 0;
+    display: block;
+}
+
+.submit-button:hover {
+    background-color: #174e95;
+}
+
+.return-button {
+    position: fixed;
+    text-align: center;
+    top: 30px;
+    left: 30px;
+    width: 56px;
+    height: 56px;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    color: #222;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.return-button:hover {
+    background-color: #ece9dc;
+    transform: translateY(-4px);
+    transition: all;
+}
+
+@media (max-width: 860px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
