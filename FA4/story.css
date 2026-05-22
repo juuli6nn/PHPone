@@ -1,0 +1,33 @@
+body {
+    background-color: white;
+}
+
+.story-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: white;
+}
+
+.story-header-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.story-content {
+    line-height: 1.8;
+    font-size: 18px;
+    color: #333;
+}
+
+.story-content h1 {
+    color: #E80107;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.story-content p {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.activity-container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.activity-title {
+    text-align: center;
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.tabler {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+thead {
+    background-color: #E80107;
+    color: white;
+}
+
+th {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+tbody tr {
+    border: 1px solid #ddd;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+/* Make first column (Name) bold */
+td:first-child {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 12px;
+    }
+    
+    td, th {
+        padding: 8px;
+    }
+    
+    .activity-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+}

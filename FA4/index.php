@@ -1,39 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
+require('header.php');
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Summative 1</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-</head>
-
-<body>
-
-    <div class="wrapper">
-        <h1 class="title">Formative 4</h1>
-        <p class="subtitle">by Arianne Julian Cruz</p>
-
-        <div class="cards">
-            <a href="act1.php" class="card">
-                <span class="card-number">1</span>
-                <div class="card-text">
-                    <span class="card-title">Form</span>
-                </div>
-                <span class="arrow">›</span>
-            </a>
-
-            <a href="act2.php" class="card">
-                <span class="card-number">2</span>
-                <div class="card-text">
-                    <span class="card-title">Multiplication Table</span>
-                </div>
-                <span class="arrow">›</span>
-            </a>
-        </div>
+<div class="stories-container">
+    <div class="story-card">
+        <a href="story1.php">
+            <div class="story-image">
+                <img src="IMG1.jpg" alt="Story 1">
+            </div>
+            <div class="story-info">
+                <h3 class="story-title">The Invincibles Legacy</h3>
+                <p class="story-author">Story 1</p>
+            </div>
+        </a>
     </div>
 
-</body>
+    <div class="story-card">
+        <a href="story2.php">
+            <div class="story-image">
+                <img src="img2.jpg" alt="Story 2">
+            </div>
+            <div class="story-info">
+                <h3 class="story-title">North London Forever</h3>
+                <p class="story-author">Story 2</p>
+            </div>
+        </a>
+    </div>
 
-</html>
+    <div class="story-card">
+        <a href="story3.php">
+            <div class="story-image">
+                <img src="img3.jpg" alt="Story 3">
+            </div>
+            <div class="story-info">
+                <h3 class="story-title">2026 PREMIER LEAGUE CHAMPIONS.</h3>
+                <p class="story-author">Story 3</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="story-card">
+        <a href="story4.php">
+            <div class="story-image">
+                <img src="img4.jpg" alt="Story 4">
+            </div>
+            <div class="story-info">
+                <h3 class="story-title">The Gunners Rise</h3>
+                <p class="story-author">Story 4</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="story-card">
+        <a href="story5.php">
+            <div class="story-image">
+                <img src="img5.jpg" alt="Story 5">
+            </div>
+            <div class="story-info">
+                <h3 class="story-title">Red and White Pride</h3>
+                <p class="story-author">Story 5</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<?php 
+require('footer.php');
+?>
+
+
+
+
+
+
+
+
+
+
+
+
