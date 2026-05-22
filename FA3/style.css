@@ -68,9 +68,21 @@ body {
 }
 
 .card:hover {
-    background-color: #ece9dc;
+    background-color: #F02A2B;
     transform: translateY(-4px);
-    color: black;
+    color: white;
+}
+
+.card:hover .card-number {
+    color: white;
+}
+
+.card:hover .card-text {
+    color: white;
+}
+
+.card:hover .arrow {
+    color: white;
 }
 
 .card-number {
