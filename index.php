@@ -26,16 +26,16 @@
                  * This makes the code easier to read than using index numbers like $item[0]
                  */
                 $moduleProjects = [
-                    ["num" => "01", "title" => "Flexbox Basics",       "desc" => "display:flex, direction, justify, align, gap, wrap, flex:1",   "link" => "01-flexbox/"],
-                    ["num" => "02", "title" => "CSS Grid",             "desc" => "display:grid, columns, 1fr, repeat(), auto-fill, minmax",      "link" => "02-css-grid/"],
-                    ["num" => "03", "title" => "PHP Arrays & Foreach", "desc" => "array(), [], foreach, echo, string concat with .",             "link" => "03-php-arrays/"],
-                    ["num" => "04", "title" => "PHP String Functions", "desc" => "strlen, ucfirst, strtoupper, strrev, strpos, str_replace",     "link" => "04-php-strings/"],
-                    ["num" => "05", "title" => "Responsive Design",    "desc" => "@media queries, breakpoints, mobile-first thinking",          "link" => "05-responsive/"],
-                    ["num" => "06", "title" => "PHP Includes",         "desc" => "require, include, reusable header and footer components",      "link" => "06-php-includes/"],
-                    ["num" => "07", "title" => "HTML Tables + PHP",    "desc" => "table, thead, tbody, tr, th, td, border-collapse, nth-child", "link" => "07-tables/"],
-                    ["num" => "08", "title" => "Hover & Transitions",  "desc" => "transition, transform, translateY, scale, box-shadow, :hover","link" => "08-hover-effects/"],
-                    ["num" => "09", "title" => "CSS Position",         "desc" => "static, relative, absolute, fixed, z-index, top/left",        "link" => "09-position/"],
-                    ["num" => "10", "title" => "Mini Site",            "desc" => "Everything combined: includes, arrays, grid, tables, hover",   "link" => "10-mini-site/"],
+                    ["num" => "01", "title" => "Flexbox Basics",       "desc" => "display:flex, direction, justify, align, gap, wrap, flex:1",   "link" => "resources/01-flexbox/"],
+                    ["num" => "02", "title" => "CSS Grid",             "desc" => "display:grid, columns, 1fr, repeat(), auto-fill, minmax",      "link" => "resources/02-css-grid/"],
+                    ["num" => "03", "title" => "PHP Arrays & Foreach", "desc" => "array(), [], foreach, echo, string concat with .",             "link" => "resources/03-php-arrays/"],
+                    ["num" => "04", "title" => "PHP String Functions", "desc" => "strlen, ucfirst, strtoupper, strrev, strpos, str_replace",     "link" => "resources/04-php-strings/"],
+                    ["num" => "05", "title" => "Responsive Design",    "desc" => "@media queries, breakpoints, mobile-first thinking",          "link" => "resources/05-responsive/"],
+                    ["num" => "06", "title" => "PHP Includes",         "desc" => "require, include, reusable header and footer components",      "link" => "resources/06-php-includes/"],
+                    ["num" => "07", "title" => "HTML Tables + PHP",    "desc" => "table, thead, tbody, tr, th, td, border-collapse, nth-child", "link" => "resources/07-tables/"],
+                    ["num" => "08", "title" => "Hover & Transitions",  "desc" => "transition, transform, translateY, scale, box-shadow, :hover","link" => "resources/08-hover-effects/"],
+                    ["num" => "09", "title" => "CSS Position",         "desc" => "static, relative, absolute, fixed, z-index, top/left",        "link" => "resources/09-position/"],
+                    ["num" => "10", "title" => "Mini Site",            "desc" => "Everything combined: includes, arrays, grid, tables, hover",   "link" => "resources/10-mini-site/"],
                 ];
 
                 /* FOREACH — loops through every item in the array.
@@ -65,12 +65,12 @@
                  * are siblings of resources/, not inside it.
                  */
                 $myProjects = [
-                    ["num" => "FA1", "title" => "Formative 1",          "desc" => "Single page layout — basic HTML & CSS structure",              "link" => "../FA1/"],
-                    ["num" => "FA2", "title" => "Formative 2",          "desc" => "Card navigation + MBA image gallery + activity pages",         "link" => "../FA2/"],
-                    ["num" => "FA3", "title" => "Formative 3",          "desc" => "Arsenal squad table with images, card nav, hover effects",     "link" => "../FA3/"],
-                    ["num" => "FA4", "title" => "Formative 4",          "desc" => "Story blog — header/footer includes, dropdown nav, PHP strings","link" => "../FA4/"],
-                    ["num" => "F4R", "title" => "Formative 4 Revised",  "desc" => "Revised version of FA4 with cleaner structure",               "link" => "../FA4REV/"],
-                    ["num" => "TSA", "title" => "Summative 1",          "desc" => "Summative assessment — card nav + activity pages",             "link" => "../TSA1/"],
+                    ["num" => "FA1", "title" => "Formative 1",          "desc" => "Single page layout — basic HTML & CSS structure",              "link" => "FA1/"],
+                    ["num" => "FA2", "title" => "Formative 2",          "desc" => "Card navigation + MBA image gallery + activity pages",         "link" => "FA2/"],
+                    ["num" => "FA3", "title" => "Formative 3",          "desc" => "Arsenal squad table with images, card nav, hover effects",     "link" => "FA3/"],
+                    ["num" => "FA4", "title" => "Formative 4",          "desc" => "Story blog — header/footer includes, dropdown nav, PHP strings","link" => "FA4/"],
+                    ["num" => "F4R", "title" => "Formative 4 Revised",  "desc" => "Revised version of FA4 with cleaner structure",               "link" => "FA4REV/"],
+                    ["num" => "TSA", "title" => "Summative 1",          "desc" => "Summative assessment — card nav + activity pages",             "link" => "TSA1/"],
                 ];
 
                 foreach ($myProjects as $project) {
