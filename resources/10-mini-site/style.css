@@ -1,0 +1,289 @@
+/* ── RESET ─────────────────────────────────────────────── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ── BODY — sticky footer pattern ─────────────────────── */
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f0f2f5;
+    color: #2c3e50;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* stack header / main / footer */
+}
+
+/* ── BACK BUTTON — position: fixed ─────────────────────── */
+.back {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    z-index: 1000;
+    transition: background 0.2s;
+}
+.back:hover { background: #E80107; }
+
+/* ── HEADER ────────────────────────────────────────────── */
+header {
+    background: #E80107;
+    color: white;
+    padding: 0 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 56px;
+    gap: 30px;
+}
+
+.nav-brand {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 4px;
+    margin-left: auto;  /* push nav links to the right */
+}
+
+.nav-links a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-links a:hover { background: rgba(255,255,255,0.2); color: white; }
+
+/* ── MAIN ──────────────────────────────────────────────── */
+main {
+    flex: 1;       /* grows to fill space so footer stays at bottom */
+    padding: 40px 20px;
+}
+
+/* ── CONTAINER ─────────────────────────────────────────── */
+.container {
+    max-width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* ── PAGE HEADER ───────────────────────────────────────── */
+.page-header { display: flex; flex-direction: column; gap: 4px; }
+.page-header h1 { font-size: 28px; color: #E80107; }
+.page-sub { font-size: 14px; color: #888; }
+
+/* ── SQUAD GRID ────────────────────────────────────────── */
+/* Desktop: 4 columns; tablet: 2; mobile: 1 */
+.squad-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 900px)  { .squad-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px)  { .squad-grid { grid-template-columns: 1fr; } }
+
+/* ── PLAYER CARD ───────────────────────────────────────── */
+.player-card {
+    background: white;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-top: 3px solid #ddd;
+    transition: transform 0.25s, box-shadow 0.25s;
+    position: relative;  /* needed to anchor .badge (position:absolute) */
+}
+
+.player-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+/* Top scorers get a red top border */
+.top-scorer { border-top-color: #E80107; }
+
+.shirt-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #eee;
+    line-height: 1;
+}
+
+.player-name { font-size: 15px; font-weight: 700; color: #2c3e50; }
+.player-pos  { font-size: 12px; color: #888; }
+
+/* Stats row at the bottom of the card */
+.player-stats {
+    display: flex;
+    gap: 16px;
+    margin-top: auto;  /* push to bottom of the card */
+    padding-top: 10px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.stat-item { display: flex; flex-direction: column; gap: 1px; }
+.stat-val  { font-size: 18px; font-weight: 700; color: #E80107; }
+.stat-lbl  { font-size: 11px; color: #aaa; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* Badge — position:absolute anchored to the card (which has position:relative) */
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #E80107;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 20px;
+}
+
+/* ── SUMMARY BAR ───────────────────────────────────────── */
+.summary-bar {
+    background: #2c3e50;
+    color: white;
+    border-radius: 10px;
+    padding: 20px 30px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.summary-item { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.summary-val  { font-size: 22px; font-weight: 700; color: #E80107; }
+.summary-lbl  { font-size: 12px; opacity: 0.7; text-align: center; }
+
+/* ── TABLE (shared by stats + fixtures pages) ───────────── */
+.table-wrap {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+thead { background: #E80107; color: white; }
+th { padding: 12px 16px; text-align: center; border: 1px solid rgba(255,255,255,0.2); white-space: nowrap; }
+td { padding: 11px 16px; text-align: center; border: 1px solid #eee; }
+.name-td, .opponent { text-align: left; font-weight: bold; }
+
+tbody tr:nth-child(even) { background: #fafafa; }
+tbody tr:hover           { background: #fff3f3; }
+
+/* ── STRING FUNCTION CARDS (stats.php) ─────────────────── */
+.explanation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.fn-card {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 3px solid #E80107;
+}
+
+.fn-name {
+    font-size: 12px;
+    background: #1e1e1e;
+    color: #9cdcfe;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    display: block;
+}
+
+.fn-result {
+    font-size: 12px;
+    font-family: monospace;
+    background: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #2c3e50;
+}
+
+/* ── RECORD ROW (fixtures.php) ─────────────────────────── */
+.record-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.record-item {
+    flex: 1;
+    min-width: 100px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.record-val { font-size: 32px; font-weight: 700; }
+.record-lbl { font-size: 12px; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.win-item  { background: #27ae60; color: white; }
+.draw-item { background: #f39c12; color: white; }
+.loss-item { background: #E80107; color: white; }
+
+/* ── TABLE ROW COLOURS (fixtures.php) ──────────────────── */
+/* Conditional classes applied by PHP in fixtures.php */
+.win-row  td { background: rgba(39,174,96,0.08); }
+.draw-row td { background: rgba(243,156,18,0.08); }
+.loss-row td { background: rgba(232,1,7,0.08); }
+
+.score    { font-weight: bold; font-size: 15px; }
+
+/* Result badges — W/D/L pill buttons */
+.result-badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+}
+.result-w { background: #27ae60; }
+.result-d { background: #f39c12; }
+.result-l { background: #E80107; }
+
+/* ── FOOTER ────────────────────────────────────────────── */
+footer {
+    background: #2c3e50;
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}

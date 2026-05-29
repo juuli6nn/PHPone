@@ -1,0 +1,226 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8f9fa;
+    padding: 60px 20px 40px;
+    color: #2c3e50;
+}
+
+/* ── BACK BUTTON — position: fixed ─────────────────────── */
+.back {
+    position: fixed;        /* stays on screen no matter how you scroll   */
+    top: 16px;              /* 16px from the top of the VIEWPORT           */
+    left: 16px;             /* 16px from the left of the VIEWPORT          */
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    z-index: 1000;          /* sit above everything else on the page       */
+    transition: background 0.2s;
+}
+.back:hover { background: #E80107; }
+
+.page-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+h1 { font-size: 32px; color: #E80107; }
+
+.intro {
+    background: white;
+    border-left: 4px solid #E80107;
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+code {
+    background: #eee;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+.block {
+    background: white;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.block h2 { font-size: 17px; color: #E80107; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; }
+.block p  { font-size: 14px; color: #555; line-height: 1.5; }
+
+.code {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 14px 18px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 1.7;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+/* ── POSITION TABLE ────────────────────────────────────── */
+.pos-table {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pos-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 180px;
+    gap: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.pos-row:last-child { border-bottom: none; }
+
+.pos-row > div {
+    padding: 10px 14px;
+    border-right: 1px solid #eee;
+    line-height: 1.5;
+}
+.pos-row > div:last-child { border-right: none; }
+
+.header-row { background: #2c3e50; color: white; font-weight: bold; }
+
+.pos-row:nth-child(even):not(.header-row) { background: #fafafa; }
+
+/* ── DEMO AREA ─────────────────────────────────────────── */
+.demo-area {
+    background: #ECEFF4;
+    border-radius: 8px;
+    padding: 16px;
+    min-height: 100px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* ── STATIC BOXES ──────────────────────────────────────── */
+.static-box {
+    background: #2c3e50;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* ── RELATIVE BOXES ────────────────────────────────────── */
+.rel-box {
+    background: #E80107;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.shifted {
+    position: relative;   /* relative to where it normally would be */
+    top: 20px;            /* 20px below its normal position         */
+    left: 30px;           /* 30px right of its normal position      */
+    background: #c0392b;
+    outline: 2px dashed white;
+}
+
+/* ── ABSOLUTE DEMO ─────────────────────────────────────── */
+.abs-parent {
+    position: relative;  /* children with position:absolute anchor to this */
+    background: #ECEFF4;
+    border-radius: 8px;
+    height: 180px;
+    padding: 12px;
+    font-size: 13px;
+    color: #888;
+    font-style: italic;
+}
+
+.abs-child {
+    position: absolute;  /* positioned from the parent's corner */
+    background: #E80107;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.top-right  { top: 10px;  right: 10px; }
+.bottom-left{ bottom: 10px; left: 10px; }
+.center     {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* offset by half its own size to truly center */
+    background: #2c3e50;
+}
+
+/* ── STICKY DEMO ───────────────────────────────────────── */
+.sticky-demo {
+    height: 200px;
+    overflow-y: scroll;   /* scroll inside this box to see sticky effect */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.sticky-header-demo {
+    position: sticky;     /* sticks to top when scrolled to */
+    top: 0;               /* stick at top of the scrollable container */
+    background: #E80107;
+    color: white;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.scroll-row {
+    padding: 10px 16px;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+}
+
+/* ── Z-INDEX DEMO ──────────────────────────────────────── */
+.z-demo {
+    position: relative;
+    height: 120px;
+}
+
+.z-box {
+    position: absolute;  /* must be positioned (not static) for z-index to work */
+    width: 160px;
+    height: 80px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+}
+
+.z1  { background: #7f8c8d; top: 30px; left: 0;   z-index: 1; }
+.z5  { background: #E80107; top: 10px; left: 60px; z-index: 5; }
+.z10 { background: #2c3e50; top: 20px; left: 120px;z-index: 10; }

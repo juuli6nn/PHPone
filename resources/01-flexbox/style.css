@@ -1,0 +1,151 @@
+/* ── RESET ─────────────────────────────────────────────── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8f9fa;
+    padding: 60px 20px 40px;
+    color: #2c3e50;
+}
+
+/* ── BACK BUTTON ───────────────────────────────────────── */
+.back {
+    position: fixed;   /* stays in place when you scroll     */
+    top: 16px;
+    left: 16px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+.back:hover { background: #E80107; }
+
+/* ── PAGE WRAPPER ──────────────────────────────────────── */
+.page-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+h1 { font-size: 32px; color: #E80107; }
+
+.intro {
+    background: white;
+    border-left: 4px solid #E80107;
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+code {
+    background: #eee;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+/* ── DEMO SECTIONS ─────────────────────────────────────── */
+.demo-section {
+    background: white;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.demo-section h2 {
+    font-size: 18px;
+    color: #E80107;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+.demo-section p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* ── LABEL ─────────────────────────────────────────────── */
+.label {
+    font-size: 12px;
+    font-family: monospace;
+    background: #f0f0f0;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #333;
+    margin-top: 6px;
+}
+
+/* ── DEMO CONTAINER ────────────────────────────────────── */
+/* This is the flex parent — all .box children are flex items */
+.demo {
+    background: #ECEFF4;
+    border-radius: 8px;
+    padding: 12px;
+    gap: 10px;          /* space between boxes               */
+    min-height: 60px;
+}
+
+/* ── FLEX DIRECTION ────────────────────────────────────── */
+.demo-row    { display: flex; flex-direction: row; }
+.demo-column { display: flex; flex-direction: column; }
+
+/* ── JUSTIFY-CONTENT ───────────────────────────────────── */
+.jc-start   { justify-content: flex-start; }
+.jc-center  { justify-content: center; }
+.jc-end     { justify-content: flex-end; }
+.jc-between { justify-content: space-between; }
+.jc-around  { justify-content: space-around; }
+
+/* ── ALIGN-ITEMS ───────────────────────────────────────── */
+.demo-tall  { min-height: 100px; }     /* tall so you can see vertical alignment */
+.ai-start   { align-items: flex-start; }
+.ai-center  { align-items: center; }
+.ai-end     { align-items: flex-end; }
+.ai-stretch { align-items: stretch; }  /* boxes will fill the full height        */
+
+/* ── FLEX-WRAP ─────────────────────────────────────────── */
+.nowrap { flex-wrap: nowrap; }   /* items stay on one line, may shrink      */
+.wrap   { flex-wrap: wrap; }     /* items wrap to the next line when needed */
+
+/* ── FLEX GROW ─────────────────────────────────────────── */
+.flex1 { flex: 1; }  /* grow and shrink equally, share all space */
+.flex2 { flex: 2; }  /* gets double the share compared to flex:1 */
+
+/* ── BOX (flex item) ───────────────────────────────────── */
+.box {
+    background: #E80107;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;   /* don't shrink below 50px wide       */
+}
+
+/* stretch demo: no height so align-items:stretch can control it */
+.box-noheight {
+    width: 50px;
+    height: auto;
+}
+
+/* ── ARROW DEMO ────────────────────────────────────────── */
+.arrow-demo {
+    margin-left: auto;   /* pushes everything before it to the left */
+    font-size: 22px;
+    align-self: center;
+    color: #E80107;
+}

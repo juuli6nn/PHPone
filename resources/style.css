@@ -1,0 +1,201 @@
+/* ── RESET ───────────────────────────────────────────────────
+   Remove all default browser margin/padding.
+   box-sizing: border-box means padding is INCLUDED in the
+   element's declared width — no surprise size overflows.       */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ── BODY ────────────────────────────────────────────────────
+   Simple block layout — .page handles its own centering.      */
+body {
+    background-color: #ECEFF4;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* ── PAGE WRAPPER ────────────────────────────────────────────
+   max-width caps the content so it doesn't stretch too wide
+   on large monitors. margin: 0 auto centers it horizontally.  */
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: #999;
+    text-align: center;
+    margin-top: -4px;
+    margin-bottom: 8px;
+}
+
+/* ── TWO-COLUMN GRID ─────────────────────────────────────────
+   display: grid turns this into a grid container.
+   grid-template-columns: 1fr 1fr = two equal columns.
+   Each "1fr" means "one fraction of the available space".
+   gap adds space between the two columns.                     */
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start; /* columns don't stretch to match each other's height */
+}
+
+/* ── SECTION (each column) ───────────────────────────────────
+   flex-direction: column stacks the heading and cards top-down.
+   gap: 10px = space between each card.                        */
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-heading {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c3e50;
+    padding-bottom: 4px;
+    border-bottom: 3px solid #E80107; /* red underline accent */
+    margin-bottom: 4px;
+}
+
+.section-sub {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: -6px;
+    margin-bottom: 6px;
+}
+
+/* ── CARD ────────────────────────────────────────────────────
+   display: flex makes the number, text, and arrow sit in a row.
+   transition: smoothly animates hover changes.                */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0ddd5;
+    border-radius: 10px;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+/* :hover — only applies when the mouse is over the element    */
+.card:hover {
+    background-color: #E80107;
+    color: white;
+    transform: translateY(-4px); /* lifts the card 4px upward  */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* ── MY PROJECTS column uses a dark navy accent instead ───── */
+.card--mine .card-number { color: #2c3e50; }
+.card--mine:hover { background-color: #2c3e50; }
+
+.card-number {
+    font-size: 26px;
+    font-weight: 700;
+    min-width: 44px;
+    text-align: center;
+    color: #E80107;
+}
+
+.card:hover .card-number {
+    color: white; /* number turns white on hover                */
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.card-title {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.card-desc {
+    font-size: 11px;
+    color: #888;
+}
+
+.card:hover .card-desc {
+    color: rgba(255,255,255,0.75);
+}
+
+/* margin-left: auto pushes the arrow to the far right        */
+.arrow {
+    margin-left: auto;
+    font-size: 18px;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────────
+   @media (max-width: 768px) = applies only on screens ≤768px.
+   On small screens, switch from 2 columns to 1 column.        */
+@media (max-width: 768px) {
+    .columns {
+        grid-template-columns: 1fr; /* stack columns vertically */
+    }
+}
+
+/* ── PRACTICE SECTION ────────────────────────────────────────
+   Full-width row below the two columns.
+   Uses the same .section flex-column pattern.                 */
+.section--practice {
+    margin-top: 8px;
+}
+
+/* Green underline to visually separate it from the two above */
+.section-heading--green {
+    border-bottom-color: #27ae60;
+}
+
+/* Practice cards are not links so no hover lift —
+   just a subtle left border accent instead.                   */
+.card--practice {
+    border-left: 4px solid #27ae60;
+    cursor: default;
+    gap: 16px;
+}
+
+.card--practice .card-number {
+    color: #27ae60;
+    font-size: 20px;
+    min-width: 36px;
+}
+
+/* ── DIFFICULTY BADGE ────────────────────────────────────────
+   display: inline-block lets us add padding to a <span>.
+   border-radius: 4px gives it pill-like rounded corners.      */
+.badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-left: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge--easy   { background: #d5f5e3; color: #1e8449; }
+.badge--medium { background: #fef9e7; color: #b7950b; }
+.badge--hard   { background: #fdecea; color: #c0392b; }

@@ -1,0 +1,202 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8f9fa;
+    padding: 60px 20px 40px;
+    color: #2c3e50;
+}
+
+.back {
+    position: fixed;
+    top: 16px; left: 16px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+.back:hover { background: #E80107; }
+
+.page-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+h1 { font-size: 32px; color: #E80107; }
+
+/* On tablet, make the heading a bit smaller */
+@media (max-width: 768px) { h1 { font-size: 26px; } }
+/* On mobile, smaller still */
+@media (max-width: 480px) { h1 { font-size: 22px; } }
+
+.intro {
+    background: white;
+    border-left: 4px solid #E80107;
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.block {
+    background: white;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.block h2 {
+    font-size: 17px;
+    color: #E80107;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+.block p { font-size: 14px; color: #555; line-height: 1.6; }
+
+.code {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 14px 18px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 1.7;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+code {
+    background: #eee;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+/* ── INDICATOR BAR: shows which breakpoint is active ───── */
+.responsive-indicator {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.responsive-indicator span {
+    padding: 6px 12px;
+    border-radius: 20px;
+    opacity: 0.3;   /* dim all by default */
+}
+
+/* Desktop label is bright by default */
+.desktop-label { background: #2c3e50; color: white; opacity: 1; }
+.tablet-label  { background: #E80107; color: white; }
+.mobile-label  { background: #27ae60; color: white; }
+
+/* On tablet, highlight tablet label */
+@media (max-width: 768px) {
+    .desktop-label { opacity: 0.3; }
+    .tablet-label  { opacity: 1; }
+}
+
+/* On mobile, highlight mobile label */
+@media (max-width: 480px) {
+    .tablet-label { opacity: 0.3; }
+    .mobile-label { opacity: 1; }
+}
+
+/* ── RESPONSIVE GRID DEMO ──────────────────────────────── */
+/* Desktop: 3 columns */
+.responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Tablet (768px or less): 2 columns */
+@media (max-width: 768px) {
+    .responsive-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile (480px or less): 1 column (full width) */
+@media (max-width: 480px) {
+    .responsive-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.r-card {
+    background: #E80107;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.r-card h3 { font-size: 15px; }
+.r-card p  { font-size: 12px; opacity: 0.85; }
+
+/* ── SHOW/HIDE DEMO ────────────────────────────────────── */
+.show-hide-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.show-hide-demo div {
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Desktop-only: always show on desktop */
+.desktop-only {
+    background: #2c3e50;
+    color: white;
+}
+
+/* Hide desktop-only on tablet */
+@media (max-width: 768px) {
+    .desktop-only { display: none; }
+}
+
+/* Tablet-only: hidden on desktop and mobile */
+.tablet-only {
+    background: #E80107;
+    color: white;
+    display: none;  /* hidden by default (desktop) */
+}
+
+/* Show tablet-only between 480px and 768px */
+@media (max-width: 768px) {
+    .tablet-only { display: block; }
+}
+@media (max-width: 480px) {
+    .tablet-only { display: none; }
+}
+
+/* Mobile-only: hidden by default, shown on mobile */
+.mobile-only {
+    background: #27ae60;
+    color: white;
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .mobile-only { display: block; }
+}

@@ -1,0 +1,262 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8f9fa;
+    padding: 60px 20px 40px;
+    color: #2c3e50;
+}
+
+.back {
+    position: fixed;
+    top: 16px; left: 16px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+.back:hover { background: #E80107; }
+
+.page-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+h1 { font-size: 32px; color: #E80107; }
+
+.intro {
+    background: white;
+    border-left: 4px solid #E80107;
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+code {
+    background: #eee;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+.block {
+    background: white;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.block h2 { font-size: 17px; color: #E80107; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; }
+.block p  { font-size: 13px; color: #555; line-height: 1.5; }
+
+.code {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 14px 18px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 1.7;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+/* ── EFFECTS GRID ──────────────────────────────────────── */
+.effects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+/* Base styles for all effect cards */
+.effect-card {
+    background: white;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    /* transition is set individually per card below */
+}
+
+.effect-label { font-size: 14px; font-weight: bold; color: #2c3e50; }
+.effect-code  { font-size: 11px; font-family: monospace; background: #f0f0f0; padding: 3px 7px; border-radius: 4px; }
+.effect-card p{ font-size: 12px; color: #888; margin-top: 4px; }
+
+/* ── LIFT (translateY) ─────────────────────────────────── */
+.lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.lift:hover {
+    transform: translateY(-8px);                   /* move up 8px     */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+/* ── SCALE ─────────────────────────────────────────────── */
+.scale {
+    transition: transform 0.3s ease;
+}
+.scale:hover {
+    transform: scale(1.05);   /* grow to 105% of original size       */
+}
+
+/* ── BACKGROUND COLOR CHANGE ───────────────────────────── */
+.bg-change {
+    transition: background-color 0.3s, color 0.3s;
+}
+.bg-change:hover {
+    background-color: #E80107;
+    color: white;
+}
+.bg-change:hover .effect-label { color: white; }
+.bg-change:hover .effect-code  { background: rgba(255,255,255,0.3); color: white; }
+.bg-change:hover p              { color: rgba(255,255,255,0.8); }
+
+/* ── BOX SHADOW ────────────────────────────────────────── */
+.shadow {
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+.shadow:hover {
+    box-shadow: 0 16px 40px rgba(0,0,0,0.2);   /* bigger, deeper shadow */
+}
+
+/* ── BORDER CHANGE ─────────────────────────────────────── */
+.border-change {
+    transition: border-color 0.3s;
+}
+.border-change:hover {
+    border-color: #E80107;
+}
+.border-change:hover .effect-label { color: #E80107; }
+
+/* ── FADE (opacity) ────────────────────────────────────── */
+.fade {
+    transition: opacity 0.3s;
+}
+.fade:hover {
+    opacity: 0.5;  /* becomes semi-transparent on hover               */
+}
+
+/* ── IMAGE ZOOM DEMO ───────────────────────────────────── */
+.image-demo {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.image-wrapper {
+    width: 200px;
+    height: 140px;
+    overflow: hidden;   /* clips anything that goes outside the box   */
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+/* Fake image (colored box) — behaves like an <img> for this demo */
+.fake-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #E80107, #c0392b);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    transition: transform 0.4s ease;  /* animate the scale smoothly   */
+}
+
+/* When you hover the WRAPPER, the IMAGE inside scales */
+.image-wrapper:hover .fake-image {
+    transform: scale(1.15);   /* zoom in — overflow:hidden clips it    */
+}
+
+/* ── CHILD ELEMENT DEMO ────────────────────────────────── */
+.child-demo {
+    padding: 8px 0;
+}
+
+.parent-card {
+    background: white;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    max-width: 420px;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.parent-card:hover {
+    background: #E80107;
+    border-color: #E80107;
+    transform: translateY(-4px);
+}
+
+.num {
+    font-size: 28px;
+    font-weight: 600;
+    color: #E80107;
+    transition: color 0.2s;
+}
+
+/* When parent is hovered, child .num also changes color */
+.parent-card:hover .num { color: white; }
+
+.texts { display: flex; flex-direction: column; gap: 2px; }
+
+.card-name { font-weight: bold; font-size: 15px; transition: color 0.2s; }
+.card-sub  { font-size: 12px; color: #888; transition: color 0.2s; }
+
+.parent-card:hover .card-name { color: white; }
+.parent-card:hover .card-sub  { color: rgba(255,255,255,0.7); }
+
+.arr {
+    margin-left: auto;
+    font-size: 22px;
+    color: #2c3e50;
+    transition: color 0.2s;
+}
+.parent-card:hover .arr { color: white; }
+
+/* ── TIMING FUNCTION DEMOS ─────────────────────────────── */
+.timing-demos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.timing-card {
+    background: #E80107;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    /* CSS custom property --timing is set inline via PHP */
+    transition: transform 0.6s var(--timing);
+    width: fit-content;
+    min-width: 160px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.timing-card:hover {
+    transform: translateX(100px);  /* slides right so you can compare speed curves */
+}

@@ -1,0 +1,159 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8f9fa;
+    padding: 60px 20px 40px;
+    color: #2c3e50;
+}
+
+.back {
+    position: fixed;
+    top: 16px; left: 16px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+.back:hover { background: #E80107; }
+
+.page-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+h1 { font-size: 32px; color: #E80107; }
+
+.block {
+    background: white;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow-x: auto;  /* allow table to scroll if too wide on small screens */
+}
+
+.block h2 { font-size: 17px; color: #E80107; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; }
+.block p  { font-size: 14px; color: #555; line-height: 1.5; }
+
+.code {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 14px 18px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 1.7;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+/* ── BASIC TABLE ───────────────────────────────────────── */
+.basic-table {
+    width: 100%;
+    border-collapse: collapse;  /* remove gaps between cell borders */
+    font-size: 14px;
+}
+
+.basic-table thead { background: #E80107; color: white; }
+.basic-table th, .basic-table td {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* ── DATA TABLE (PHP-generated) ────────────────────────── */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.data-table thead { background: #E80107; color: white; }
+
+.data-table th {
+    padding: 12px 14px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.2);
+    white-space: nowrap;
+}
+
+.data-table td {
+    padding: 10px 14px;
+    border: 1px solid #eee;
+    text-align: center;
+    vertical-align: middle;  /* center content vertically in cell */
+}
+
+/* First column: player name, left-aligned and bold */
+.data-table .name-col { text-align: left; font-weight: bold; color: #2c3e50; }
+
+/* Stats columns: red and bold to stand out */
+.data-table .stat { color: #E80107; font-weight: bold; }
+
+/* Zebra striping — alternating row colors */
+.data-table tbody tr:nth-child(even) { background: #fafafa; }
+
+/* Hover — highlight row in light red */
+.data-table tbody tr:hover { background: #fff3f3; cursor: default; }
+
+/* ── STYLE DEMO TABLE ──────────────────────────────────── */
+.style-demo-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.style-demo-table thead { background: #2c3e50; color: white; }
+.style-demo-table th, .style-demo-table td { padding: 10px 14px; border: 1px solid #ddd; }
+
+/* nth-child(even) = 2nd, 4th, 6th row gets gray background */
+.style-demo-table tbody tr:nth-child(even) { background: #f0f0f0; }
+
+/* nth-child(odd) = 1st, 3rd, 5th row is white */
+.style-demo-table tbody tr:nth-child(odd)  { background: white; }
+
+/* Hover — changes background on mouse-over */
+.style-demo-table tbody tr:hover { background: #fdecea; }
+
+/* first-child = first td in each row */
+.style-demo-table td:first-child { font-weight: bold; color: #E80107; }
+
+/* last-child = last td in each row */
+.style-demo-table td:last-child { color: #999; font-style: italic; }
+
+/* ── MERGE TABLE (colspan/rowspan) ────────────────────── */
+.merge-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: center;
+}
+
+.merge-table th, .merge-table td {
+    padding: 12px;
+    border: 2px solid #ddd;
+}
+
+.merge-table thead tr:first-child th {
+    background: #E80107;
+    color: white;
+    font-size: 15px;
+}
+
+.merge-table thead tr:last-child th { background: #2c3e50; color: white; }
+
+.merge-table .rowspan-cell {
+    background: #fdecea;
+    font-weight: bold;
+    color: #E80107;
+    vertical-align: middle;
+}

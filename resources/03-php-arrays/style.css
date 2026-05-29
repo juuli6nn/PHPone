@@ -1,0 +1,127 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8f9fa;
+    padding: 60px 20px 40px;
+    color: #2c3e50;
+}
+
+.back {
+    position: fixed;
+    top: 16px; left: 16px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+.back:hover { background: #E80107; }
+
+.page-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+h1 { font-size: 32px; color: #E80107; }
+
+.block {
+    background: white;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.block h2 {
+    font-size: 17px;
+    color: #E80107;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+.block p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ── CODE BLOCK ────────────────────────────────────────── */
+/* pre keeps whitespace/newlines; monospace font makes it readable */
+.code {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 14px 18px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    white-space: pre;   /* preserve spaces and newlines */
+    overflow-x: auto;   /* scroll if too wide           */
+}
+
+code {
+    background: #eee;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+/* ── OUTPUT BOXES ──────────────────────────────────────── */
+.output {
+    background: #f0f4f8;
+    border-radius: 6px;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.output p {
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.output-list {
+    background: #f0f4f8;
+    border-radius: 6px;
+    padding: 14px 18px 14px 36px;  /* left padding for bullet indent */
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.output-list li {
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+/* ── TABLE ─────────────────────────────────────────────── */
+table {
+    width: 100%;
+    border-collapse: collapse;  /* removes gap between cell borders */
+    font-size: 14px;
+}
+
+thead {
+    background-color: #E80107;
+    color: white;
+}
+
+th, td {
+    padding: 10px 14px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* alternating row colors — nth-child(even) targets 2nd, 4th, 6th rows */
+tbody tr:nth-child(even) { background: #f9f9f9; }
+tbody tr:hover           { background: #fdecea; }

@@ -1,0 +1,150 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8f9fa;
+    padding: 60px 20px 40px;
+    color: #2c3e50;
+}
+
+.back {
+    position: fixed;
+    top: 16px; left: 16px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+.back:hover { background: #E80107; }
+
+.page-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+h1 { font-size: 32px; color: #E80107; }
+
+.intro {
+    background: white;
+    border-left: 4px solid #E80107;
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ── TABLE ─────────────────────────────────────────────── */
+.table-wrapper {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    overflow-x: auto;   /* scroll horizontally on small screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+thead {
+    background: #E80107;
+    color: white;
+}
+
+th {
+    padding: 12px 10px;
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.2);
+    white-space: nowrap;   /* don't break column headers */
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #eee;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+td.name {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #E80107;
+}
+
+tbody tr:nth-child(even) { background: #fafafa; }
+tbody tr:hover           { background: #fff3f3; }
+
+/* ── SECTION TITLE ─────────────────────────────────────── */
+.section-title {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-top: 10px;
+}
+
+/* ── REFERENCE CARD GRID ───────────────────────────────── */
+/* auto-fill: as many cards as fit; each at least 260px wide */
+.ref-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.ref-card {
+    background: white;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 3px solid #E80107;
+}
+
+.fn-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #E80107;
+    font-family: monospace;
+}
+
+.fn-what {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.fn-syntax {
+    background: #1e1e1e;
+    color: #9cdcfe;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: monospace;
+    display: block;
+}
+
+.fn-example {
+    font-size: 12px;
+    color: #2c3e50;
+    font-family: monospace;
+    background: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+code {
+    background: #eee;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-family: monospace;
+}
