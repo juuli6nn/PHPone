@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.timer-display {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+    margin: 30px 0;
+}
+
+.cookie-status {
+    margin: 20px 0;
+}
+
+.cookie-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.cookie-item.active {
+    background-color: #d4edda;
+    border-color: #28a745;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.return-button {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    width: 60px;
+    height: 60px;
+    background-color: #dfdddd;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 24px;
+    z-index: 1000;
+    transition: background-color 0.2s, transform 0.15s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.return-button:hover {
+    background-color: #9C814A;
+    transform: translateY(-4px);
+}

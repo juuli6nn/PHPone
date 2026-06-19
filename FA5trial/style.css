@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ECEFF4;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.title {
+    color: black;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.subtitle {
+    color: gray;
+    font-size: 14px;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #ece9dc;
+    border-radius: 10px;
+    padding: 24px 28px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.card:hover {
+    background-color: #F02A2B;
+    transform: translateY(-4px);
+    color: white;
+}
+
+.card:hover .card-number {
+    color: white;
+}
+
+.card:hover .card-text {
+    color: white;
+}
+
+.card:hover .arrow {
+    color: white;
+}
+
+.card-number {
+    font-size: 36px;
+    font-weight: 500;
+    color: black;
+    min-width: 50px;
+    text-align: center;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: black;
+}
+
+.card-title {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.arrow {
+    margin-left: auto;
+    font-size: 20px;
+}
